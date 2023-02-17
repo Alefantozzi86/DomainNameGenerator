@@ -16,7 +16,13 @@ function newDomain(pronoun, adj, noun, domain) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
         for (let l = 0; l < domain.length; l++) {
-          console.log(pronoun[i] + adj[j] + noun[k] + domain[l]);
+          // console.log(pronoun[i] + adj[j] + noun[k] + domain[l]);
+
+          let div = document.createElement("div");
+          div.innerText = `
+        ${pronoun[i]}${adj[j]}${noun[k]}${domain[l]}
+        `;
+          document.body.appendChild(div);
         }
       }
     }
